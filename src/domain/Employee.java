@@ -1,4 +1,11 @@
 package domain;
+
+/**
+ * public class "employee" for desc of employers
+ * have 2 extensions: "artist" and "editor"
+ * @author User
+ */
+
 public class Employee {
 
     @Override
@@ -14,6 +21,13 @@ public class Employee {
 
    // private static int employeesCount = 0;
 
+    /**
+     * Constructor 1
+     * @param name
+     * @param jobTitle
+     * @param level
+     * @param dept 
+     */
     public Employee(String name, String jobTitle, int level, String dept) {
         this();
         setName(name);
@@ -29,7 +43,10 @@ public class Employee {
         }
         this.dept = dept;
     }
-
+    
+    /**
+     * Constructor 2
+     */
     public Employee() {
         ID = (int)(Math.random()*1000);
 //        if (ID > 10000) {
@@ -37,18 +54,34 @@ public class Employee {
 //        }
     }
 
+    /**
+     * Method for setting job title
+     * @param job setting string value to jobTitle
+     */
     public void setJobTitle(String job) {
         jobTitle = job;
     }
 
+    /**
+     * Method for gettin job title
+     * @return jobTitle
+     */
     public String getJobTitle() {
         return jobTitle;
     }
 
+    /**
+     * Method for getting name
+     * @return name
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Method for setting level
+     * @param level is integer variable
+     */
     public void setLevel(int level) {
         switch (level) {
             case 1:
@@ -61,14 +94,26 @@ public class Employee {
         }
     }
 
+    /**
+     * Method for getting level
+     * @return level
+     */
     public int getLevel() {
         return level;
     }
 
+    /**
+     * Method for getting department
+     * @return dept
+     */
     public String getDept() {
         return dept;
     }
-
+    
+    /**
+     * Method for setting department
+     * @param dept 
+     */
     public void setDept(String dept) {
         this.dept = dept;
     }
